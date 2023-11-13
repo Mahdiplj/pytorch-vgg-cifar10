@@ -168,8 +168,8 @@ def train(train_loader, model, criterion, optimizer, epoch):
         data_time.update(time.time() - end)
 
         if args.cpu == False:
-            input = input.cuda(async=True)
-            target = target.cuda(async=True)
+            input = input.cuda()
+            target = target.cuda()
         if args.half:
             input = input.half()
 
